@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  /*font-family: 'Ultra', serif;
+  font-family: 'Press Start 2P', cursive;
+  font-family: 'Bree Serif', serif; */
+}
+
+
+
+.header-image {
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  background: black;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+.stats, li {
+  display: inline; 
+  text-align: center;
+  font-family: 'Ultra', serif;
+  padding: 10px; 
+  margin: 5px;
+  list-style: none;
+}
+
+.score, .question-number, .total {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.quiz-view {
+  display: flex-box;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.images {
+  width: 90%;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.start-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px; 
+  font-size: 25px;
+}
+
+fieldset {
+  background: grey;
+}
+
+.right-answer {
+  color: green;
+}
