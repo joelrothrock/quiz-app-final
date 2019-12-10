@@ -115,11 +115,11 @@ function checkAnswer() {
     $('span').removeClass("right-answer wrong-answer");
     if(playerSelection === currentQues.answer) {
       STORE.score++; 
-      $(`${id}`).append(`You got it right<br/>`);
+      $(`${id}`).append(`You got it right!<br/> <div><img src='photos/ginobili.jpg' class='js-right-answer'></div>`);
       $(`${id}`).addClass("right-answer");
     }
     else {
-      $(`${id}`).append(`You got it wrong <br/> The answer is "${currentQues.answer}"<br/>`);
+      $(`${id}`).append(`You got it wrong! <br/> The answer is "${currentQues.answer}"<br/> <div><img src='photos/ginobili-block.jpg' class='js-wrong-answer'></div>`);
       $(`${id}`).addClass("wrong-answer");
     }
 
@@ -133,7 +133,8 @@ function checkAnswer() {
 
 function restartQuiz() {
   $('body').on('click','#restart', (event) => {
-    renderAQuestion();
+    console.log('restart has been clicked');
+    generateQuestion();
   });
 }
 
@@ -141,6 +142,7 @@ function runQuiz(){
   startQuiz();
   checkAnswer();
   handleQuestions();
+  restartQuiz()
 }
 
 $(runQuiz);
